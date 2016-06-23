@@ -7,9 +7,9 @@
 - Jason Sutter
 - Jonathan Hall
 
-###Key Deliverables for MVP
-  - polymorphic associations
-  - ajax for dynamic voting/sorting and scrolling
+##Key Deliverables for MVP
+  - Polymorphic associations
+  - AJAX for dynamic voting/sorting and scrolling
   - A user can post questions
   - A user can answer questions
   - A user can comment on both questions and answers

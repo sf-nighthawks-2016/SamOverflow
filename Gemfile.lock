@@ -26,6 +26,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    commonjs (0.2.7)
     daemons (1.2.3)
     diff-lcs (1.2.5)
     eventmachine (1.2.0.1)
@@ -33,15 +34,19 @@ GEM
       activesupport (>= 3.0.0)
     faker (1.6.3)
       i18n (~> 0.5)
+    font-awesome-less (4.6.2)
+      less (>= 2.4.0)
     i18n (0.7.0)
     json (1.8.3)
+    less (2.6.0)
+      commonjs (~> 0.2.7)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     multi_json (1.12.1)
-    nokogiri (1.6.8)
+    nokogiri (1.6.7)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     pg (0.18.4)
@@ -101,6 +106,7 @@ DEPENDENCIES
   capybara
   factory_girl
   faker
+  font-awesome-less
   pg
   rack-test
   rake
@@ -112,4 +118,4 @@ DEPENDENCIES
   thin
 
 BUNDLED WITH
-   1.11.2
+   1.12.5

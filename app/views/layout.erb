@@ -11,6 +11,12 @@
 
 
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="/js/application.js"></script>
+
+
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
   <!-- Optional theme -->
@@ -18,9 +24,9 @@
 
   <!-- Latest compiled and minified JavaScript -->
 
-
-  <link rel="stylesheet" href="/css/application.css">
-  <link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/application.css">
+  <!-- <link rel="stylesheet" href="/css/normalize.css"> -->
+  
 
 
   <title>SamOverflow</title>
@@ -40,16 +46,21 @@
       <ul class="nav navbar-nav">
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/users/new"><span class="fa fa-user-plus"></span> Sign Up</a></li>
-        <li><a href="/authorization"><span class="fa fa-sign-in"></span> Login</a></li>
-        <li><span class="fa fa-sign-out"><form action="/signout" method="post"><input type="submit" value="Sign Out"></span></form></li>
+        <% if !current_user %>
+          <li><a href="/users/new"><span class="fa fa-user-plus"></span> Sign Up</a></li>
+          <li><a href="/authorization"><span class="fa fa-sign-in"></span> Login</a></li>
+        <% else %>
+         <li><a href="/users/<%= current_user.id %>"><span class="fa fa-user"></span> Profile</a></li>
+
+
+          <li><a href="/signout"><span class="fa fa-sign-out"></span> Log Out</a></li>
+          
+        <% end %>
       </ul>
     </div>
   </div>
 </nav>
   <%= yield %>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script src="/js/application.js"></script>
+
 </body>
 </html>

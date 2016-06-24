@@ -1,15 +1,18 @@
-
+<!-- <form id="posts" method="post" action="/posts">
+  <input type="text" name="title" placeholder="title">
+  <input type="submit" value="submit new post">
+</form> -->
 
 <div class='post-container'>
   <% @posts.each do |post| %>
 
 
     <article id="<%= post.id %>">
-      <form method="post" action='#' class="inline">
+      <form method="post" action='/posts/<%= post.id %>' class="inline">
 
 
-        <button type="submit" name="submit_param" value="submit_value" class="fa fa-sort-asc vote-button upvote-button"></button>
-        <button type="submit" name="submit_param" value="submit_value" class="fa fa-sort-desc vote-button upvote-button"></button>
+        <button type="submit" name="submit_param" value="submit_value" class="fa fa-sort-asc vote-button upvote-button up"></button>
+        <button type="submit" name="submit_param" value="submit_value" class="fa fa-sort-desc vote-button upvote-button down"></button>
 
 
       </form>
@@ -26,7 +29,3 @@
   <% end %>
 </div>
 
-<form id="posts" method="post" action="/posts">
-  <input type="text" name="title" placeholder="title">
-  <input type="submit" value="submit new post">
-</form>

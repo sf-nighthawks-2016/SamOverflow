@@ -1,8 +1,18 @@
 $(document).ready(function() {
 
-  $('button.fa.fa-sort-asc.vote-button.upvote-button').on('click', function(event){
+  $('.up').on('click', function(event){
     event.preventDefault();
-    console.log("clicked")
+    $thing = $(this)
+    $path = $(this).parent().attr("action")
+
+    $.ajax({
+      method: 'post',
+      url: $path
+    }).done(function(response){
+        var $article = $thing.closest("article");
+        var $points = $article.find(".points");
+        $points.html(response.points);
+    })
   })
 
 });

@@ -37,7 +37,7 @@ post "/authorization" do
   end
 end
 
-post "/signout" do
+get "/signout" do
   session[:user_id] = nil
   redirect "/"
 end

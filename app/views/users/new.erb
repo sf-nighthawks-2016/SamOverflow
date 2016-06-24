@@ -1,0 +1,20 @@
+<div>
+  <% if @error %>
+    <%= @error %>
+  <% end %>
+  <h1>Sign up with Sam Overflow!</h1>
+  <form>
+    <div>
+      <input type="text" name ="user[username]" placeholder="Username">
+    </div>
+    <div>
+      <input type="text" name ="user[email]" placeholder="Email">
+    </div>
+    <div>
+      <input type="password" name="user[password]" placeholder="Password">
+    </div>
+    <div>
+      <input type="submit" value"Sign Up" formaction="/users" formmethod="post">
+    </div>
+  </form>
+</div>

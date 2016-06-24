@@ -4,6 +4,7 @@ $(document).ready(function() {
     event.preventDefault();
     $thing = $(this)
     $path = $(this).parent().attr("action")
+    $(this).css('color', 'green')
 
     $.ajax({
       method: 'post',
@@ -19,6 +20,7 @@ $(document).ready(function() {
     event.preventDefault();
     $thing = $(this)
     $path = $(this).parent().attr("action")
+    $(this).css('color', 'red')
 
     $.ajax({
       method: 'delete',

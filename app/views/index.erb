@@ -3,10 +3,10 @@
 <div class='post-container'>
   <% @posts.each do |post| %>
 
- 
+
     <article id="<%= post.id %>">
       <form method="post" action='#' class="inline">
-       
+
 
         <button type="submit" name="submit_param" value="submit_value" class="fa fa-sort-asc vote-button upvote-button"></button>
         <button type="submit" name="submit_param" value="submit_value" class="fa fa-sort-desc vote-button upvote-button"></button>
@@ -15,10 +15,10 @@
       </form>
       <h2><a href='#'><%= post.title %></a></h2>
       <p>
-        <span class='points'></span>
-        <span class='username'></span>
-        <span class='timestamp'></span>
-        <span class='comment-count'></span>
+        <span class='points'><%= post.votes.count %></span>
+        <span class='username'><%= User.find(post.user_id).username %></span>
+        <span class='timestamp'><%= format_time(post) %></span>
+        <span class='comment-count'><%= post.comments.count %></span>
         <a class="delete" href='#'></a>
       </p>
     </article>

@@ -1,4 +1,6 @@
-<a href="/posts/new" type="button" class="btn btn-danger">Submit a new question</a>
+<% if current_user %>
+  <a href="/posts/new" type="button" class="btn btn-danger">Submit a new question</a>
+<% end %>
 
 <div class='post-container'>
   <% @posts.each do |post| %>

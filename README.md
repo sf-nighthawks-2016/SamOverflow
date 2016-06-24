@@ -13,6 +13,7 @@
   - A user can post questions
   - A user can answer questions
   - A user can comment on both questions and answers
-  - A OP user can mark a given answer as best
+  - A user can see a given answer is best (popular voting rather than by OP choice)
   - A user can upvote or downvote comments but only once
   - A user can't add questions/answers or vote until logged in
+  - A user can see posts/comments/votes without logging in

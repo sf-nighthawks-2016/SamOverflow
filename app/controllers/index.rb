@@ -1,5 +1,6 @@
 get '/' do
 	@posts = Post.all
+  @posts.reverse
 	erb :index
 end
 

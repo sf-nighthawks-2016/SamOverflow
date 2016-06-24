@@ -1,0 +1,25 @@
+<h2><%= @post.title %></h2>
+      <p>
+        <span class='points'><%= @post.votes.count %></span>
+        <span class='username'><%= User.find(@post.user_id).username %></span>
+        <span class='timestamp'><%= format_time(@post) %></span>
+        <span class='comment-count'><%= @post.comments.count %></span>
+        <a class="delete" href='#'></a>
+        <br>
+        <form role="form" action="/comments/<%= @post.id %>" method="post">
+
+        <label for="comment">Comment:</label>
+        <textarea class="form-control" rows="5" id="content" name="content"></textarea>
+        <br>
+        <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+       <br>
+        <span class='comment-content'>
+        <ul>
+          <% @post.comments.each do |comment| %>
+          <br>
+            <li><%= comment.content %></li>
+          <% end %>
+          </ul>
+        </span>
+      </p>

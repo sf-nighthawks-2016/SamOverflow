@@ -1,7 +1,18 @@
-// $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+$(document).ready(function() {
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
-// });
+  $('.up').on('click', function(event){
+    event.preventDefault();
+    $thing = $(this)
+    $path = $(this).parent().attr("action")
+
+    $.ajax({
+      method: 'post',
+      url: $path
+    }).done(function(response){
+        var $article = $thing.closest("article");
+        var $points = $article.find(".points");
+        $points.html(response.points);
+    })
+  })
+
+});

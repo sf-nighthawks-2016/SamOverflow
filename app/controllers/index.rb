@@ -1,5 +1,7 @@
+###home page
 get '/' do
 	@posts = Post.all
+  @posts = @posts.reverse
 	erb :index
 end
 

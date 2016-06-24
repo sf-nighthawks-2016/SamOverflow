@@ -1,0 +1,29 @@
+<div>
+  <h3><%= "Hello #{@user.username}!" %></h3>
+
+<div class='post-container'>
+  <% @posts.each do |post| %>
+
+
+    <article id="<%= post.id %>">
+      <form method="post" action='/posts/<%= post.id %>' class="inline">
+
+
+        <button type="submit" name="submit_param" value="submit_value" class="fa fa-sort-asc vote-button upvote-button up"></button>
+        <button type="submit" name="submit_param" value="submit_value" class="fa fa-sort-desc vote-button upvote-button down"></button>
+
+
+      </form>
+      <h2><a href='#'><%= post.title %></a></h2>
+      <p>
+        <span class='points'><%= post.votes.count %></span>
+        <span class='username'><%= User.find(post.user_id).username %></span>
+        <span class='timestamp'><%= format_time(post) %></span>
+        <span class='comment-count'><%= post.comments.count %></span>
+        <a class="delete" href='#'></a>
+      </p>
+    </article>
+
+  <% end %>
+</div>
+</div>

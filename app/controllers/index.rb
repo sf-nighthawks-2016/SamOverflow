@@ -14,7 +14,7 @@ end
 post '/users' do
   @user = User.new(params[:user])
   if @user.save #&& @user.password != nil
-    redirect "/"
+    redirect "/authorization"
   else
     @error = "Invalid information, double check your email is correct or that you have not already created an account with this email"
     erb :"/users/new"
@@ -39,7 +39,7 @@ post "/authorization" do
   end
 end
 
-post "/signout" do
+get "/signout" do
   session[:user_id] = nil
   redirect "/"
 end

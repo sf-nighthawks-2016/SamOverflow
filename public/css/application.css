@@ -1,0 +1,91 @@
+.nav_bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.nav_bar_element_r {
+    float: left;
+}
+
+.nav_bar_element {
+    float: right;
+}
+
+.nav_bar_element a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav_bar_element a:hover {
+    background-color: #111;
+}
+
+.nav_bar_element_r a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav_bar_element_r a:hover {
+    background-color: #111;
+}
+
+.sign-up-form {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.boxes {
+    padding: 5px;
+}
+
+.form-box {
+    border-color: #936850;
+    border-width: 0px 0px 2px 0px;
+    outline: none;
+    color: #936850;
+    font-size: 18px;
+}
+
+
+
+.cool_button {
+  color: #936850;
+  font-weight: bold;
+  background-color: transparent;
+  border-color: transparent;
+  padding-top: 8px;
+}
+
+.boxes {
+  margin-top: 10px;
+  background-color: none;
+  outline: none;
+  color: #936850;
+}
+
+input {
+   color: #936850;
+}
+
+button {
+  color: #936850;
+  font-weight: bold;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.pad {
+  margin-left: 50%;
+}

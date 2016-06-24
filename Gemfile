@@ -10,6 +10,9 @@ gem 'sinatra-contrib'
 # Use Thin for our web server
 gem 'thin'
 
+
+gem 'font-awesome-less'
+
 gem 'activesupport'
 gem 'activerecord'
 

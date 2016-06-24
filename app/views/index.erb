@@ -1,28 +1,25 @@
-<header>
-  <h1>SamOverflow</h1>
-  <p>
-    <a href="#posts">new</a>
-    <a href="#">comments</a>
-    <a href="#">popular</a>
-    <a href="#">login</a>
-  </p>
-</header>
 
 
 <div class='post-container'>
   <% @posts.each do |post| %>
 
+ 
     <article id="<%= post.id %>">
-      <form method="post" action='/posts/<%= post.id %>/vote' class="inline">
+      <form method="post" action='#' class="inline">
+       
+
+        <button type="submit" name="submit_param" value="submit_value" class="fa fa-sort-asc vote-button upvote-button"></button>
         <button type="submit" name="submit_param" value="submit_value" class="fa fa-sort-desc vote-button upvote-button"></button>
+
+
       </form>
-      <h2><a href='/posts/<%= post.id %>'><%= post.title %></a></h2>
+      <h2><a href='#'><%= post.title %></a></h2>
       <p>
-        <span class='points'><%= post.points %></span>
-        <span class='username'><%= post.username %></span>
-        <span class='timestamp'><%= post.time_since_creation %></span>
-        <span class='comment-count'><%= post.comment_count %></span>
-        <a class="delete" href='/posts/<%= post.id %>'></a>
+        <span class='points'></span>
+        <span class='username'></span>
+        <span class='timestamp'></span>
+        <span class='comment-count'></span>
+        <a class="delete" href='#'></a>
       </p>
     </article>
 

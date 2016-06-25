@@ -1,0 +1,127 @@
+body {
+  counter-reset:section;
+  background-color: #F6F6EF;
+  font-family: Verdana;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #F4712D;
+  padding: 5px 5px;
+}
+
+header h1 {
+  font-size: 11pt;
+  display: inline;
+}
+
+header p {
+  margin-left: 5px ;
+  font-size: 10pt;
+  display: inline;
+}
+
+header p a {
+  color: black;
+  text-decoration: none;
+}
+
+header p a:nth-child(n + 2):before {
+  content: " | ";
+}
+
+article {
+  margin: 5px 5px;
+}
+
+article a.vote-button {
+  color: #8C8C8C;
+  text-decoration: none;
+  display: inline;
+  vertical-align: sub;
+}
+
+
+article h2 {
+  display: inline;
+  font-size: 10pt;
+}
+
+article:before {
+  counter-increment: section;
+  color: #8C8C8C;
+  font-size: 10pt;
+  content: counter(section) ". ";
+}
+
+article h2 a {
+  text-decoration: none;
+  color: black;
+}
+
+article p {
+  color: #8C8C8C;
+  font-size: 7pt;
+  margin: 3px 30px;
+}
+
+article p span.points:after {
+  content: " points";
+}
+
+article p span.username:before {
+  content: " by ";
+}
+
+article p span.timestamp:after {
+  content: ' hours ago';
+}
+
+article p span.comment-count:before {
+  content: ' | ';
+}
+
+article p span.comment-count:after {
+  content: ' comments | ';
+}
+
+article p a.delete {
+  text-decoration: none;
+  color: #8C8C8C;
+  text-decoration: none;
+}
+
+article p a.delete:before {
+  content: ' delete this post';
+
+}
+
+form#posts input[type='text'] {
+  width: 200px;
+  margin-left: 20px;
+  font-size: 10pt;
+  height: 17px;
+
+}
+
+form#posts input[type='submit'] {
+  font-size: 10pt;
+  margin-left: 5px;
+  border-width: 1px;
+  font-weight: bold;
+  background-color: #F4712D;
+}
+
+.inline {
+  display: inline;
+}
+
+.upvote-button {
+  background-color: transparent;
+  border: none;
+  padding-top: 5px;
+  color: #8C8C8C;
+  vertical-align: sub;
+  padding: 1px 0px 0px 0px;
+}
